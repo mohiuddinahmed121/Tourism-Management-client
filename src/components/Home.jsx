@@ -4,6 +4,7 @@ import img1 from "../assets/lotus-mahal-209924_1920.jpg";
 import img2 from "../assets/beach-666122_1920.jpg";
 import img3 from "../assets/tindari-7276929_1920.jpg";
 import img4 from "../assets/taj-mahal-4109110_1920.jpg";
+import Footer from "./Footer";
 
 const Home = () => {
    return (
@@ -34,7 +35,7 @@ const Home = () => {
                   <img className="h-[650px] w-[1920px] relative" src={img2} />
                   <h2 className="absolute bottom-28 left-1/2 right-2 text-2xl text-white">
                      A resort jetty with sun loungers and crystal-clear sea, evoking luxury and
-                     leisure — ideal for “Featured Resorts” or “Relaxation” sections..
+                     leisure — ideal for "Featured Resorts" or "Relaxation" sections..
                   </h2>
                </div>
                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
@@ -82,6 +83,75 @@ const Home = () => {
                </div>
             </div>
          </div>
+         {/* -----------------------EXTRA SECTION--------------- */}
+         <div className="bg-green-100 h-[400px] pt-5 my-30">
+            <div className="flex justify-center items-center mt-28 mb-28 mr-14 ml-14">
+               <h1 className="text-center text-2xl font-semibold w-full">
+                  At AsiaVista, we bring you closer to the heart of Southeast Asia from tranquil
+                  beaches to ancient temples. Whether you're planning your next vacation or just
+                  exploring, our curated travel insights and breathtaking destinations will guide
+                  your journey every step of the way.
+               </h1>
+            </div>
+         </div>
+         {/* Tourists Spots Section */}
+         <div>
+            <div>
+               <h1 className="text-4xl font-bold text-center mb-10">Our Top Adventures</h1>
+               <div className="grid grid-cols-3 mx-20 gap-8 mb-20">
+                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
+                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
+                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
+                           Cameron Highlands
+                        </h1>
+                        <button class="btn btn-soft btn-white ml-32">View Details</button>
+                     </div>
+                  </div>
+                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
+                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
+                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
+                           Cameron Highlands
+                        </h1>
+                        <button class="btn btn-soft btn-white ml-32">View Details</button>
+                     </div>
+                  </div>
+                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
+                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
+                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
+                           Cameron Highlands
+                        </h1>
+                        <button class="btn btn-soft btn-white ml-32">View Details</button>
+                     </div>
+                  </div>
+                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
+                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
+                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
+                           Cameron Highlands
+                        </h1>
+                        <button class="btn btn-soft btn-white ml-32">View Details</button>
+                     </div>
+                  </div>
+                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
+                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
+                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
+                           Cameron Highlands
+                        </h1>
+                        <button class="btn btn-soft btn-white ml-32">View Details</button>
+                     </div>
+                  </div>
+                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
+                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
+                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
+                           Cameron Highlands
+                        </h1>
+                        <button class="btn btn-soft btn-white ml-32">View Details</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         {/* -----------------footer section------------------- */}
+         <Footer></Footer>
       </div>
    );
 };

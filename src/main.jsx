@@ -4,6 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import AddTouristsSpot from "./components/AddTouristsSpot.jsx";
+import AllTouristsSpot from "./components/AllTouristsSpot.jsx";
 
 const router = createBrowserRouter([
    {
@@ -16,6 +17,8 @@ const router = createBrowserRouter([
    },
    {
       path: "/allTouristsSpot",
+      element: <AllTouristsSpot></AllTouristsSpot>,
+      loader: () => fetch("http://localhost:5000/touristsSpot"),
    },
    {
       path: "/viewDetails",
