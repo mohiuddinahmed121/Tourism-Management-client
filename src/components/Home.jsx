@@ -5,8 +5,10 @@ import img2 from "../assets/beach-666122_1920.jpg";
 import img3 from "../assets/tindari-7276929_1920.jpg";
 import img4 from "../assets/taj-mahal-4109110_1920.jpg";
 import Footer from "./Footer";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Home = () => {
+   const touristsSpot = useLoaderData();
    return (
       <div>
          <Navbar></Navbar>
@@ -99,54 +101,21 @@ const Home = () => {
             <div>
                <h1 className="text-4xl font-bold text-center mb-10">Our Top Adventures</h1>
                <div className="grid grid-cols-3 mx-20 gap-8 mb-20">
-                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
-                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
-                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
-                           Cameron Highlands
-                        </h1>
-                        <button class="btn btn-soft btn-white ml-32">View Details</button>
+                  {touristsSpot.map((touristsSpot) => (
+                     <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
+                        <div
+                           className="h-[300px] rounded-xl bg-cover bg-center text-white"
+                           style={{ backgroundImage: `url(${touristsSpot.photo})` }}
+                        >
+                           <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
+                              {touristsSpot.name}
+                           </h1>
+                           <button className="btn btn-soft btn-white ml-32">
+                              <Link to={`/touristsSpot/${touristsSpot._id}`}>View Details</Link>
+                           </button>
+                        </div>
                      </div>
-                  </div>
-                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
-                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
-                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
-                           Cameron Highlands
-                        </h1>
-                        <button class="btn btn-soft btn-white ml-32">View Details</button>
-                     </div>
-                  </div>
-                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
-                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
-                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
-                           Cameron Highlands
-                        </h1>
-                        <button class="btn btn-soft btn-white ml-32">View Details</button>
-                     </div>
-                  </div>
-                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
-                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
-                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
-                           Cameron Highlands
-                        </h1>
-                        <button class="btn btn-soft btn-white ml-32">View Details</button>
-                     </div>
-                  </div>
-                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
-                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
-                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
-                           Cameron Highlands
-                        </h1>
-                        <button class="btn btn-soft btn-white ml-32">View Details</button>
-                     </div>
-                  </div>
-                  <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
-                     <div className="h-[300px] rounded-xl bg-[url('/nature.jpg')] bg-cover bg-center text-white">
-                        <h1 className="text-2xl bg-opacity-50 pt-20 pb-4 text-center rounded font-bold">
-                           Cameron Highlands
-                        </h1>
-                        <button class="btn btn-soft btn-white ml-32">View Details</button>
-                     </div>
-                  </div>
+                  ))}
                </div>
             </div>
          </div>
