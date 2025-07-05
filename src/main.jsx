@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import AddTouristsSpot from "./components/AddTouristsSpot.jsx";
 import AllTouristsSpot from "./components/AllTouristsSpot.jsx";
+import ViewDetails from "./components/ViewDetails.jsx";
 
 const router = createBrowserRouter([
    {
@@ -21,8 +22,11 @@ const router = createBrowserRouter([
       loader: () => fetch("http://localhost:5000/touristsSpot"),
    },
    {
-      path: "/viewDetails",
+      path: "/touristsSpot/:id",
+      element: <ViewDetails />,
+      loader: ({ params }) => fetch(`http://localhost:5000/touristsSpot/${params.id}`),
    },
+
    {
       path: "/update",
    },

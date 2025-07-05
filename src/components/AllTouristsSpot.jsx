@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const AllTouristsSpot = () => {
-   const touristsSpots = useLoaderData();
-   const [touristsSpot, setTouristsSpot] = useState(touristsSpots);
+   const touristsSpot = useLoaderData();
 
    return (
       <div>
@@ -26,7 +24,12 @@ const AllTouristsSpot = () => {
                      <p>Travel Time: {touristsSpot.traveltime} </p>
                      <p>Seasonality: {touristsSpot.seasonality} </p>
                      <div className="card-actions justify-end">
-                        <button className="btn btn-primary rounded-full">View Details</button>
+                        <Link
+                           to={`/touristsSpot/${touristsSpot._id}`}
+                           className="btn btn-primary rounded-full"
+                        >
+                           View Details
+                        </Link>
                      </div>
                   </div>
                </div>
