@@ -106,7 +106,7 @@ const Registration = () => {
                      <br />
                      <div className="relative">
                         <input
-                           type={showPassword ? "text" : "password"}
+                           type={showPassword ? "password" : "text"}
                            placeholder="password"
                            className="input input-bordered"
                            name="password"

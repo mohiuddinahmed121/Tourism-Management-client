@@ -4,6 +4,7 @@ import img1 from "../assets/lotus-mahal-209924_1920.jpg";
 import img2 from "../assets/beach-666122_1920.jpg";
 import img3 from "../assets/tindari-7276929_1920.jpg";
 import img4 from "../assets/taj-mahal-4109110_1920.jpg";
+import img5 from "../assets/adventure-2528477_1280.jpg";
 import Footer from "./Footer";
 import { Link, useLoaderData } from "react-router-dom";
 
@@ -116,6 +117,23 @@ const Home = () => {
                         </div>
                      </div>
                   ))}
+               </div>
+            </div>
+         </div>
+         {/* Discover Southeast section */}
+         <div className="hero bg-gray-200  min-h-screen">
+            <div className="hero-content flex-col lg:flex-row">
+               <img src={img5} className="h-[500px] w-[900px] rounded-lg shadow-2xl mr-10" />
+               <div>
+                  <h1 className="text-3xl font-bold">Discover Southeast Asia Like Never Before</h1>
+                  <p className="py-6 text-xl text-gray-700">
+                     Embark on a journey across the vibrant tapestry of Southeast Asia. From lush
+                     rainforests to breathtaking islands, ancient temples to modern skylines, this
+                     region offers an unforgettable blend of culture, heritage, and natural wonders.
+                     Explore hidden gems and famous landmarks alike, guided by a spirit of adventure
+                     and a love for discovery. Let our map be your starting point to plan your dream
+                     travels today!
+                  </p>
                </div>
             </div>
          </div>

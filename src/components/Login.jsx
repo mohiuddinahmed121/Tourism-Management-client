@@ -35,6 +35,12 @@ const Login = () => {
          })
          .catch((error) => {
             setLoginError(error.message);
+            Swal.fire({
+               title: "Error!",
+               text: "Handle/Email and password combination doesn't match",
+               icon: "error",
+               confirmButtonText: "OK",
+            });
          });
    };
 
@@ -89,7 +95,7 @@ const Login = () => {
                      <br />
                      <div className="relative">
                         <input
-                           type={showPassword ? "text" : "password"}
+                           type={showPassword ? "password" : "text"}
                            placeholder="password"
                            className="input input-bordered"
                            name="password"
