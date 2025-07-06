@@ -10,6 +10,8 @@ import Login from "./components/Login.jsx";
 import Registration from "./components/Registration.jsx";
 import AuthProvider from "./components/providers/AuthProvider.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
+import MyList from "./components/MyList.jsx";
+import UpdateData from "./components/UpdateData.jsx";
 
 const router = createBrowserRouter([
    {
@@ -42,14 +44,23 @@ const router = createBrowserRouter([
 
    {
       path: "/update",
+      element: (
+         <PrivateRoute>
+            <UpdateData></UpdateData>
+         </PrivateRoute>
+      ),
    },
    {
       path: "/login",
       element: <Login></Login>,
    },
    {
-      path: "registration",
+      path: "/registration",
       element: <Registration></Registration>,
+   },
+   {
+      path: "/myList",
+      element: <MyList></MyList>,
    },
 ]);
 
