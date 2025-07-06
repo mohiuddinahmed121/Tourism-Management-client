@@ -9,6 +9,7 @@ import ViewDetails from "./components/ViewDetails.jsx";
 import Login from "./components/Login.jsx";
 import Registration from "./components/Registration.jsx";
 import AuthProvider from "./components/providers/AuthProvider.jsx";
+import PrivateRoute from "./components/PrivateRoute.jsx";
 
 const router = createBrowserRouter([
    {
@@ -18,7 +19,11 @@ const router = createBrowserRouter([
    },
    {
       path: "/addTouristsSpot",
-      element: <AddTouristsSpot></AddTouristsSpot>,
+      element: (
+         <PrivateRoute>
+            <AddTouristsSpot></AddTouristsSpot>
+         </PrivateRoute>
+      ),
    },
    {
       path: "/allTouristsSpot",
@@ -27,7 +32,11 @@ const router = createBrowserRouter([
    },
    {
       path: "/touristsSpot/:id",
-      element: <ViewDetails />,
+      element: (
+         <PrivateRoute>
+            <ViewDetails />
+         </PrivateRoute>
+      ),
       loader: ({ params }) => fetch(`http://localhost:5000/touristsSpot/${params.id}`),
    },
 
@@ -39,7 +48,7 @@ const router = createBrowserRouter([
       element: <Login></Login>,
    },
    {
-      path: "/registration",
+      path: "registration",
       element: <Registration></Registration>,
    },
 ]);
