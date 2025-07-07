@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const MyList = () => {
    const [data, setData] = useState([]);
@@ -17,7 +18,39 @@ const MyList = () => {
             .catch((err) => console.error(err));
       }
    }, [userEmail]);
-   console.log(data);
+
+   const handleDelete = (_id) => {
+      Swal.fire({
+         title: "Are you sure?",
+         text: "You won't be able to revert this!",
+         icon: "warning",
+         showCancelButton: true,
+         confirmButtonColor: "#3085d6",
+         cancelButtonColor: "#d33",
+         confirmButtonText: "Yes, delete it!",
+      }).then((result) => {
+         if (result.isConfirmed) {
+            fetch(`http://localhost:5000/touristsSpot/${_id}`, {
+               method: "DELETE",
+            })
+               .then((res) => res.json())
+               .then((dataNew) => {
+                  if (dataNew.deletedCount > 0) {
+                     Swal.fire({
+                        title: "Deleted!",
+                        text: "Your coffee has been deleted.",
+                        icon: "success",
+                     });
+                     console.log(data);
+                     console.log(data.deletedCount);
+                     console.log(_id);
+                     const remaining = data.filter((spot) => spot._id !== _id);
+                     setData(remaining);
+                  }
+               });
+         }
+      });
+   };
    return (
       <div>
          <Navbar></Navbar>
@@ -56,7 +89,12 @@ const MyList = () => {
                                     </button>
                                  </Link>
 
-                                 <button className="btn btn-sm btn-error">Delete</button>
+                                 <button
+                                    onClick={() => handleDelete(data._id)}
+                                    className="btn btn-sm btn-error"
+                                 >
+                                    Delete
+                                 </button>
                               </th>
                            </tr>
                         ))
