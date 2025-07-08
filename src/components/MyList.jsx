@@ -83,7 +83,7 @@ const MyList = () => {
                               <td>{data.averageCost}$</td>
                               <td>{data.userEmail}</td>
                               <th>
-                                 <Link to="/update">
+                                 <Link to={`/update/${data._id}`}>
                                     <button className="btn btn-sm btn-primary mr-2.5">
                                        Update
                                     </button>
