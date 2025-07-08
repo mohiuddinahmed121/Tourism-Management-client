@@ -107,7 +107,7 @@ const Home = () => {
          <div>
             <div>
                <h1 className="text-4xl font-bold text-center mb-10">Our Top Adventures</h1>
-               <div className="grid grid-cols-3 mx-20 gap-8 mb-20">
+               <div className="grid lg:grid-cols-3 mx-20 gap-8 mb-20">
                   {touristsSpot.map((touristsSpot) => (
                      <div className="bg-gray-400 p-5 h-[340px] rounded-xl">
                         <div
@@ -148,8 +148,8 @@ const Home = () => {
             <h1 className="text-3xl font-bold mt-20 mb-10 text-center">
                Explore Countries of Southeast Asia
             </h1>
-            <div className="grid grid-cols-3 gap-10 px-20">
-               <div className="card bg-base-100 w-96 shadow-lg">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-10  gap-10 px-20">
+               <div className="card bg-base-100 lg:w-96 shadow-lg">
                   <div className="card-body">
                      <h2 className="font-bold text-xl text-center">Thailand</h2>
                      <p>
@@ -161,7 +161,7 @@ const Home = () => {
                      <img src={Thailand} alt="Shoes" />
                   </figure>
                </div>
-               <div className="card bg-base-100 w-96 shadow-sm">
+               <div className="card bg-base-100 lg:w-96 shadow-sm">
                   <div className="card-body">
                      <h2 className="font-bold text-xl text-center">Vietnam</h2>
                      <p>
@@ -173,7 +173,7 @@ const Home = () => {
                      <img src={Vietnam} alt="Shoes" />
                   </figure>
                </div>
-               <div className="card bg-base-100 w-96 shadow-sm">
+               <div className="card bg-base-100 lg:w-96 shadow-sm">
                   <div className="card-body">
                      <h2 className="font-bold text-xl text-center">Malaysia</h2>
                      <p>
@@ -185,7 +185,7 @@ const Home = () => {
                      <img src={Malaysia} alt="Shoes" />
                   </figure>
                </div>
-               <div className="card bg-base-100 w-96 shadow-sm">
+               <div className="card bg-base-100 lg:w-96 shadow-sm">
                   <div className="card-body">
                      <h2 className="font-bold text-xl text-center">Cambodia</h2>
                      <p>
@@ -197,7 +197,7 @@ const Home = () => {
                      <img src={Cambodia} alt="Shoes" />
                   </figure>
                </div>
-               <div className="card bg-base-100 w-96 shadow-sm">
+               <div className="card bg-base-100 lg:w-96 shadow-sm">
                   <div className="card-body">
                      <h2 className="font-bold text-xl text-center">Indonesia</h2>
                      <p>
@@ -209,7 +209,7 @@ const Home = () => {
                      <img src={Indonesia} alt="Shoes" />
                   </figure>
                </div>
-               <div className="card bg-base-100 w-96 shadow-sm">
+               <div className="card bg-base-100 lg:w-96 shadow-sm">
                   <div className="card-body">
                      <h2 className="font-bold text-xl text-center">Philippines</h2>
                      <p>
