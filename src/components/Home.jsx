@@ -7,6 +7,12 @@ import img4 from "../assets/taj-mahal-4109110_1920.jpg";
 import img5 from "../assets/adventure-2528477_1280.jpg";
 import Footer from "./Footer";
 import { Link, useLoaderData } from "react-router-dom";
+import Thailand from "../assets/tindari-7276929_1920.jpg";
+import Vietnam from "../assets/boy-1822614_1280.jpg";
+import Malaysia from "../assets/petronas-911580_1280.jpg";
+import Cambodia from "../assets/angkor-809753_1280.jpg";
+import Indonesia from "../assets/indonesia-1578647_1280.jpg";
+import Philippines from "../assets/island-218578_1280.jpg";
 
 const Home = () => {
    const touristsSpot = useLoaderData();
@@ -134,6 +140,86 @@ const Home = () => {
                      and a love for discovery. Let our map be your starting point to plan your dream
                      travels today!
                   </p>
+               </div>
+            </div>
+         </div>
+         {/* country section */}
+         <div className="my-20">
+            <h1 className="text-3xl font-bold mt-20 mb-10 text-center">
+               Explore Countries of Southeast Asia
+            </h1>
+            <div className="grid grid-cols-3 gap-10 px-20">
+               <div className="card bg-base-100 w-96 shadow-lg">
+                  <div className="card-body">
+                     <h2 className="font-bold text-xl text-center">Thailand</h2>
+                     <p>
+                        A vibrant country known for its golden temples, tropical beaches, bustling
+                        street markets, and flavorful cuisine.
+                     </p>
+                  </div>
+                  <figure>
+                     <img src={Thailand} alt="Shoes" />
+                  </figure>
+               </div>
+               <div className="card bg-base-100 w-96 shadow-sm">
+                  <div className="card-body">
+                     <h2 className="font-bold text-xl text-center">Vietnam</h2>
+                     <p>
+                        A land of emerald rice fields, limestone cliffs in Ha Long Bay, ancient
+                        cities, and a rich blend of history and culture.
+                     </p>
+                  </div>
+                  <figure>
+                     <img src={Vietnam} alt="Shoes" />
+                  </figure>
+               </div>
+               <div className="card bg-base-100 w-96 shadow-sm">
+                  <div className="card-body">
+                     <h2 className="font-bold text-xl text-center">Malaysia</h2>
+                     <p>
+                        A cultural melting pot offering modern cities, lush rainforests, the
+                        highland chill of Cameron Highlands, and beautiful islands.
+                     </p>
+                  </div>
+                  <figure>
+                     <img src={Malaysia} alt="Shoes" />
+                  </figure>
+               </div>
+               <div className="card bg-base-100 w-96 shadow-sm">
+                  <div className="card-body">
+                     <h2 className="font-bold text-xl text-center">Cambodia</h2>
+                     <p>
+                        Home to the ancient Angkor Wat temples, Cambodia boasts a deep history,
+                        welcoming people, and natural beauty.
+                     </p>
+                  </div>
+                  <figure>
+                     <img src={Cambodia} alt="Shoes" />
+                  </figure>
+               </div>
+               <div className="card bg-base-100 w-96 shadow-sm">
+                  <div className="card-body">
+                     <h2 className="font-bold text-xl text-center">Indonesia</h2>
+                     <p>
+                        An archipelago of over 17,000 islands, offering volcanic landscapes, rich
+                        traditions, and world-famous beaches like Bali.
+                     </p>
+                  </div>
+                  <figure>
+                     <img src={Indonesia} alt="Shoes" />
+                  </figure>
+               </div>
+               <div className="card bg-base-100 w-96 shadow-sm">
+                  <div className="card-body">
+                     <h2 className="font-bold text-xl text-center">Philippines</h2>
+                     <p>
+                        A tropical paradise with more than 7,000 islands, crystal-clear waters,
+                        white sand beaches, and a friendly atmosphere.
+                     </p>
+                  </div>
+                  <figure>
+                     <img src={Philippines} alt="Shoes" />
+                  </figure>
                </div>
             </div>
          </div>
