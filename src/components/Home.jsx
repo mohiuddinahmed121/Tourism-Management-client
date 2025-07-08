@@ -89,7 +89,7 @@ const Home = () => {
          {/* -----------------------EXTRA SECTION--------------- */}
          <div className="bg-green-100 h-[400px] pt-5 my-30">
             <div className="flex justify-center items-center mt-28 mb-28 mr-14 ml-14">
-               <h1 className="text-center text-2xl font-semibold w-full">
+               <h1 className="text-center text-2xl font-semibold w-full text-gray-400">
                   At AsiaVista, we bring you closer to the heart of Southeast Asia from tranquil
                   beaches to ancient temples. Whether you're planning your next vacation or just
                   exploring, our curated travel insights and breathtaking destinations will guide
