@@ -12,6 +12,7 @@ import AuthProvider from "./components/providers/AuthProvider.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
 import MyList from "./components/MyList.jsx";
 import UpdateData from "./components/UpdateData.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 const router = createBrowserRouter([
    {
@@ -61,7 +62,15 @@ const router = createBrowserRouter([
    },
    {
       path: "/myList",
-      element: <MyList></MyList>,
+      element: (
+         <PrivateRoute>
+            <MyList></MyList>
+         </PrivateRoute>
+      ),
+   },
+   {
+      path: "/notFound",
+      element: <NotFound></NotFound>,
    },
 ]);
 

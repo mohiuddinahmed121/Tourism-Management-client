@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./providers/AuthProvider";
 import Swal from "sweetalert2";
+import NotFound from "./NotFound";
 
 const MyList = () => {
    const [data, setData] = useState([]);
@@ -73,7 +74,7 @@ const MyList = () => {
                      {/* row 1 */}
 
                      {data.length === 0 ? (
-                        <p>No uploads found.</p>
+                        <p>No Data found.</p>
                      ) : (
                         data.map((data) => (
                            <tr>
