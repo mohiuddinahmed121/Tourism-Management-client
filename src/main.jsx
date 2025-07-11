@@ -14,11 +14,13 @@ import MyList from "./components/MyList.jsx";
 import UpdateData from "./components/UpdateData.jsx";
 import NotFound from "./components/NotFound.jsx";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const router = createBrowserRouter([
    {
       path: "/",
       element: <Home></Home>,
-      loader: () => fetch("http://localhost:5000/touristsSpot"),
+      loader: () => fetch(`${API_URL}/touristsSpot`),
    },
    {
       path: "/addTouristsSpot",
@@ -31,7 +33,7 @@ const router = createBrowserRouter([
    {
       path: "/allTouristsSpot",
       element: <AllTouristsSpot></AllTouristsSpot>,
-      loader: () => fetch("http://localhost:5000/touristsSpot"),
+      loader: () => fetch(`${API_URL}/touristsSpot`),
    },
    {
       path: "/touristsSpot/:id",
@@ -40,7 +42,7 @@ const router = createBrowserRouter([
             <ViewDetails />
          </PrivateRoute>
       ),
-      loader: ({ params }) => fetch(`http://localhost:5000/touristsSpot/${params.id}`),
+      loader: ({ params }) => fetch(`${API_URL}/touristsSpot/${params.id}`),
    },
 
    {
@@ -50,7 +52,7 @@ const router = createBrowserRouter([
             <UpdateData></UpdateData>
          </PrivateRoute>
       ),
-      loader: ({ params }) => fetch(`http://localhost:5000/touristsSpot/${params.id}`),
+      loader: ({ params }) => fetch(`${API_URL}/touristsSpot/${params.id}`),
    },
    {
       path: "/login",

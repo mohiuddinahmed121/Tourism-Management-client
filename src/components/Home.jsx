@@ -16,6 +16,7 @@ import Philippines from "../assets/island-218578_1280.jpg";
 
 const Home = () => {
    const touristsSpot = useLoaderData();
+
    return (
       <div>
          <Navbar></Navbar>
